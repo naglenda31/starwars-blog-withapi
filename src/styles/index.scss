@@ -1,5 +1,5 @@
-body{
-    
+body, html, #app{
+    height: 100vh;
 }
 
 
@@ -17,10 +17,19 @@ body{
     overflow-y: hidden;
 }
 
+.message-emphasis{
+    color: #dc3545; 
+}
+
 .details-top-section{
-    border: 1px solid black;
+    border: 1px solid #dc3545;
+    padding: 1rem;
     .fa-jedi-order{
         font-size: 200px;
         color: #dc3545;
     }
+}
+
+.details-table .col:not(:last-of-type){
+    border-right: 1px solid #dc3545;
 }

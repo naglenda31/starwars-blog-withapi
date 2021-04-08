@@ -5,10 +5,14 @@ import { faJedi } from "@fortawesome/free-solid-svg-icons";
 export const Footer = () => (
 	<footer className="footer mt-auto py-3 text-center">
 		<div>
-			<h3>
-				<FontAwesomeIcon icon={faJedi} />
-				<span> </span>May the FORCE be with YOU<span> </span>
-				<FontAwesomeIcon icon={faJedi} />
+			<h3 className="footer-message">
+				<span className="message-emphasis">
+					<FontAwesomeIcon icon={faJedi} />
+				</span>{" "}
+				May the <span className="message-emphasis">FORCE</span> be with YOU{" "}
+				<span className="message-emphasis">
+					<FontAwesomeIcon icon={faJedi} />
+				</span>
 			</h3>
 		</div>
 	</footer>
