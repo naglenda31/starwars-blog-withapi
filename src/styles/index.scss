@@ -1,3 +1,26 @@
-/* 
-    General Styles
-*/
+body{
+    
+}
+
+
+.logo{
+    width: 100px;
+}
+
+.section-title{
+    color: #dc3545; 
+}
+
+.row.cardrow{
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.details-top-section{
+    border: 1px solid black;
+    .fa-jedi-order{
+        font-size: 200px;
+        color: #dc3545;
+    }
+}
