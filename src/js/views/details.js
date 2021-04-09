@@ -11,12 +11,16 @@ export const Details = props => {
 	return (
 		<div className="content-wrapper">
 			<div className="container">
-				<div className="row rounded details-top-section">
-					<div className="col-12 col-md-7 p-0 align-self-center">
-						<img src="https://i.imgur.com/mm0QJgY.jpg" className="w-100" alt="Luke Skywalker picture" />
+				<div className="row details-top-section">
+					<div className="col-12 col-lg-7 p-0 align-self-center">
+						<img
+							src="https://i.imgur.com/mm0QJgY.jpg"
+							className="w-100 rounded"
+							alt="Luke Skywalker picture"
+						/>
 					</div>
 
-					<div className="col-12 col-md-5 py-4">
+					<div className="col-12 col-lg-5 py-4">
 						<h3 className="name m-3 mb-2">Luke Skywalker</h3>
 						<p className="description m-3">
 							Luke Skywalker was a Tatooine farmboy who rose from humble beginnings to become one of the
@@ -30,7 +34,7 @@ export const Details = props => {
 						</p>
 					</div>
 				</div>
-				<div className="row details-table mt-3">
+				<div className="row details-table mt-3 text-center">
 					<div className="col">
 						<h5>Gender</h5>
 						<p></p>

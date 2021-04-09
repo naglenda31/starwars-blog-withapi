@@ -1,4 +1,5 @@
 const getState = ({ getStore, getActions, setStore }) => {
+	const base_url = "https://www.swapi.tech/api/";
 	return {
 		store: {
 			demo: [
@@ -220,6 +221,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
+				fetch(`${base_url}/people`).then(res => res.json().then(data => setStore({ people: data.results })));
+				fetch(`${base_url}/planets`).then(res => res.json().then(data => setStore({ planets: data.results })));
+				fetch(`${base_url}/vehicles`).then(res =>
+					res.json().then(data => setStore({ vehicles: data.results }))
+				);
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/

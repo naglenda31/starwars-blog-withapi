@@ -13,7 +13,7 @@ export const Navbar = () => {
 						/>
 					</span>
 				</Link>
-				<div className="ml-auto">
+				<div className="dropdown ml-auto">
 					<button
 						className="btn btn-danger dropdown-toggle"
 						type="button"
@@ -21,8 +21,19 @@ export const Navbar = () => {
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false">
-						Favorites <span></span>
+						Favorites
 					</button>
+					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a className="dropdown-item" href="#">
+							Action
+						</a>
+						<a className="dropdown-item" href="#">
+							Another action
+						</a>
+						<a className="dropdown-item" href="#">
+							Something else here
+						</a>
+					</div>
 				</div>
 			</div>
 		</nav>

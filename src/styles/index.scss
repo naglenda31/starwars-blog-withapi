@@ -2,6 +2,11 @@ body, html, #app{
     height: 100vh;
 }
 
+body{
+    background: #e9ecef;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    color: #343a40;
+}
 
 .logo{
     width: 100px;
@@ -9,6 +14,9 @@ body, html, #app{
 
 .section-title{
     color: #dc3545; 
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1.5rem auto
 }
 
 .row.cardrow{
@@ -22,14 +30,15 @@ body, html, #app{
 }
 
 .details-top-section{
-    border: 1px solid #dc3545;
+    border: 2px solid #dc3545;
+    border-radius: 1rem;
     padding: 1rem;
-    .fa-jedi-order{
-        font-size: 200px;
-        color: #dc3545;
-    }
 }
 
 .details-table .col:not(:last-of-type){
     border-right: 1px solid #dc3545;
+}
+
+.navbar.navbar-light.bg-light{
+    background: #e9ecef;
 }
