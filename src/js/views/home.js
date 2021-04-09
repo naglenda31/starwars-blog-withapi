@@ -15,7 +15,7 @@ export const Home = () => {
 				<div className="row cardrow">
 					{store.people.map((character, index) => {
 						return (
-							<div className="col" key={index}>
+							<div className="col p-2" key={index}>
 								<div className="container card-container p-0">
 									<div className="card" style={{ width: "18rem" }}>
 										<img src={character.image} className="card-img-top" alt="..." />
@@ -40,11 +40,11 @@ export const Home = () => {
 				</div>
 			</div>
 			<div className="container section-container p-2 my-2">
-				<h2 className="section-title">Characters</h2>
+				<h2 className="section-title">Planets</h2>
 				<div className="row cardrow">
 					{store.planets.map((planet, index) => {
 						return (
-							<div className="col" key={index}>
+							<div className="col p-2" key={index}>
 								<div className="container card-container p-0">
 									<div className="card" style={{ width: "18rem" }}>
 										<img src={planet.image} className="card-img-top" alt="..." />
@@ -69,11 +69,11 @@ export const Home = () => {
 				</div>
 			</div>
 			<div className="container section-container p-2 my-2">
-				<h2 className="section-title">Characters</h2>
+				<h2 className="section-title">Vehicles</h2>
 				<div className="row cardrow">
 					{store.vehicles.map((vehicle, index) => {
 						return (
-							<div className="col" key={index}>
+							<div className="col p-2" key={index}>
 								<div className="container card-container p-0">
 									<div className="card" style={{ width: "18rem" }}>
 										<img src={vehicle.image} className="card-img-top" alt="..." />
