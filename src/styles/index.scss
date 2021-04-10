@@ -39,6 +39,34 @@ body{
     border-right: 1px solid #dc3545;
 }
 
-.navbar.navbar-light.bg-light{
-    background: #e9ecef;
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 1rem;
+  }
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #dc3545;
+    border-radius: 1rem; 
+  }
+
+.dropdown-menu{
+      right: 0;
+      left: auto;
+}
+
+// .favorite-count{
+//     background: white;
+//     color: #dc3545;
+//     border-radius: 1rem;
+//     padding: 1rem;
+// }
+
+.delete-favorite-icon{
+    cursor: pointer;
 }

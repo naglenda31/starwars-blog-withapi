@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faAcquisitionsIncorporated } from "@fortawesome/free-brands-svg-icons";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<div className="container-fluid">
@@ -15,24 +20,34 @@ export const Navbar = () => {
 				</Link>
 				<div className="dropdown ml-auto">
 					<button
-						className="btn btn-danger dropdown-toggle"
+						className="btn btn-danger dropdown-toggle d-flex align-items-center"
 						type="button"
 						id="dropdownMenuButton"
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false">
 						Favorites
+						<div className="favorite-count ml-1">
+							<span className="">{store.favorites.length === 0 ? "" : store.favorites.length}</span>
+						</div>
 					</button>
-					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a className="dropdown-item" href="#">
-							Action
-						</a>
-						<a className="dropdown-item" href="#">
-							Another action
-						</a>
-						<a className="dropdown-item" href="#">
-							Something else here
-						</a>
+					<div className="dropdown-menu p-1" aria-labelledby="dropdownMenuButton">
+						{store.favorites.length > 0
+							? store.favorites.map((item, index) => {
+									return (
+										<div className="dropdown-item p-1" href="#" key={index}>
+											{item.name}
+
+											<span className="float-right delete-favorite-icon">
+												<FontAwesomeIcon
+													icon={faTrash}
+													onClick={() => actions.removeFavorite(index)}
+												/>
+											</span>
+										</div>
+									);
+							  })
+							: " No Favorites Added"}
 					</div>
 				</div>
 			</div>
