@@ -9,19 +9,19 @@ export const Home = () => {
 	const params = useParams();
 	return (
 		<div className="content-wrapper">
-			<div className="container section-container p-2 my-2">
+			<div className="container section-container p-2 pt-4 mt-5 mb-3">
 				<h2 className="section-title">Characters</h2>
 				<div className="row cardrow">
 					{store.people.map((character, index) => {
 						return (
-							<div className="col p-2" key={index}>
+							<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
 								<div className="container card-container p-0">
-									<div className="card" style={{ width: "18rem" }}>
+									<div className="card m-auto" style={{ width: "18rem" }}>
 										<img src="http://placehold.jp/400x200.png" className="card-img-top" alt="..." />
 										<div className="card-body">
 											<h5 className="card-title">{character.name}</h5>
 											<div className="footer d-flex">
-												<Link to="/people_details">
+												<Link to={`/people_details/${index}`}>
 													<a href="#" className="btn btn-outline-danger">
 														Learn more!
 													</a>
@@ -42,18 +42,18 @@ export const Home = () => {
 				</div>
 			</div>
 			<div className="container section-container p-2 my-2">
-				<h2 className="section-title">Planets</h2>
+				<h2 className="section-title mt-2">Planets</h2>
 				<div className="row cardrow">
 					{store.planets.map((planet, index) => {
 						return (
-							<div className="col p-2" key={index}>
+							<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
 								<div className="container card-container p-0">
-									<div className="card" style={{ width: "18rem" }}>
+									<div className="card m-auto" style={{ width: "18rem" }}>
 										<img src="http://placehold.jp/400x200.png" className="card-img-top" alt="..." />
 										<div className="card-body">
 											<h5 className="card-title">{planet.name}</h5>
 											<div className="footer d-flex">
-												<Link to="/planet_details">
+												<Link to={`/planet_details/${index}`}>
 													<a href="#" className="btn btn-outline-danger">
 														Learn more!
 													</a>
@@ -73,19 +73,19 @@ export const Home = () => {
 					})}
 				</div>
 			</div>
-			<div className="container section-container p-2 my-2">
-				<h2 className="section-title">Vehicles</h2>
+			<div className="container section-container px-2 pt-2 pb-5 mt-2 mb-5">
+				<h2 className="section-title mt-2">Vehicles</h2>
 				<div className="row cardrow">
 					{store.vehicles.map((vehicle, index) => {
 						return (
-							<div className="col p-2" key={index}>
+							<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
 								<div className="container card-container p-0">
-									<div className="card h-100" style={{ width: "18rem" }}>
+									<div className="card m-auto" style={{ width: "18rem" }}>
 										<img src="http://placehold.jp/400x200.png" className="card-img-top" alt="..." />
 										<div className="card-body">
 											<h5 className="card-title">{vehicle.name}</h5>
 											<div className="footer d-flex">
-												<Link to="/vehicle_details">
+												<Link to={`/vehicle_details/${index}`}>
 													<a href="#" className="btn btn-outline-danger">
 														Learn more!
 													</a>

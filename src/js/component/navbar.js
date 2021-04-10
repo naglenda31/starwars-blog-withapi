@@ -8,7 +8,7 @@ import { faAcquisitionsIncorporated } from "@fortawesome/free-brands-svg-icons";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar fixed-top navbar-light bg-light mb-3">
 			<div className="container-fluid">
 				<Link to="/">
 					<span className="navbar-brand mb-0 h1">
@@ -20,16 +20,16 @@ export const Navbar = () => {
 				</Link>
 				<div className="dropdown ml-auto">
 					<button
-						className="btn btn-danger dropdown-toggle d-flex align-items-center"
+						className="btn btn-danger dropdown-toggle"
 						type="button"
 						id="dropdownMenuButton"
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false">
 						Favorites
-						<div className="favorite-count ml-1">
-							<span className="">{store.favorites.length === 0 ? "" : store.favorites.length}</span>
-						</div>
+						<span className="badge badge-light bg-white ml-1">
+							{store.favorites.length === 0 ? "" : store.favorites.length}
+						</span>
 					</button>
 					<div className="dropdown-menu p-1" aria-labelledby="dropdownMenuButton">
 						{store.favorites.length > 0
