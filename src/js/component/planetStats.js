@@ -1,41 +1,49 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-export const PersonStats = props => {
-	const [person, setPerson] = useState(null);
+export const PlanetStats = props => {
+	const [planet, setPlanet] = useState(null);
 	useEffect(() => {
 		fetch(props.url)
 			.then(res => res.json())
-			.then(data => setPerson(data.result.properties));
+			.then(data => setPlanet(data.result.properties));
 	}, []);
 	return (
 		<div className="container">
 			<div className="row details-table text-center">
-				{person !== null && (
+				{planet !== null && (
 					<>
-						<div className="col">
-							<h5 className="details-table-header">Birth Year</h5>
-							<p>{person.birth_year}</p>
+						<div className="column col col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Diameter</h5>
+							<p>{planet.diameter}</p>
 						</div>
-						<div className="col">
-							<h5 className="details-table-header">Height</h5>
-							<p>{person.height}</p>
+						<div className="column col col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Rotation period</h5>
+							<p>{planet.rotation_period}</p>
 						</div>
-						<div className="col">
-							<h5 className="details-table-header">Mass</h5>
-							<p>{person.mass}</p>
+						<div className="column col col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Orbital period</h5>
+							<p>{planet.orbital_period}</p>
 						</div>
-						<div className="col">
-							<h5 className="details-table-header">Gender</h5>
-							<p>{person.gender}</p>
+						<div className="column col col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Gravity</h5>
+							<p>{planet.gravity}</p>
 						</div>
-						<div className="col">
-							<h5 className="details-table-header">Hair color</h5>
-							<p>{person.hair_color}</p>
+						<div className="column col col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Population</h5>
+							<p>{planet.population}</p>
 						</div>
-						<div className="col">
-							<h5 className="details-table-header">Eye color</h5>
-							<p>{person.eye_color}</p>
+						<div className="column col col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Climate</h5>
+							<p>{planet.climate}</p>
+						</div>
+						<div className="column col col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Terrain</h5>
+							<p>{planet.terrain}</p>
+						</div>
+						<div className="column col col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Surface water</h5>
+							<p>{planet.surface_water}</p>
 						</div>
 					</>
 				)}
@@ -44,6 +52,6 @@ export const PersonStats = props => {
 	);
 };
 
-PersonStats.propTypes = {
+PlanetStats.propTypes = {
 	url: PropTypes.string.isRequired
 };

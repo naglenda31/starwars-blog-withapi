@@ -20,7 +20,7 @@ export const PeopleDetails = props => {
 								<img
 									src="https://i.imgur.com/mm0QJgY.jpg"
 									className="w-100 rounded"
-									alt="Luke Skywalker picture"
+									alt="character image"
 								/>
 							</div>
 
@@ -31,15 +31,15 @@ export const PeopleDetails = props => {
 									of the greatest Jedi the galaxy has ever known. Along with his friends Princess Leia
 									and Han Solo, Luke battled the evil Empire, discovered the truth of his parentage,
 									and ended the tyranny of the Sith. A generation later, the location of the famed
-									Jedi master was one of the galaxy’s greatest mysteries. Haunted by Ben Solo’s fall
-									to evil and convinced the Jedi had to end, Luke sought exile on a distant world,
-									ignoring the galaxy’s pleas for help. But his solitude would be interrupted – and
-									Luke Skywalker had one final, momentous role to play in the struggle between good
-									and evil.
+									Jedi master was one of the galaxy&apos;s greatest mysteries. Haunted by Ben
+									Solo&apos;s fall to evil and convinced the Jedi had to end, Luke sought exile on a
+									distant world, ignoring the galaxy&apos;s pleas for help. But his solitude would be
+									interrupted – and Luke Skywalker had one final, momentous role to play in the
+									struggle between good and evil.
 								</p>
 							</div>
 						</div>
-						<hr className="" />
+						<br />
 						{store.people.length > 0 && <PersonStats url={store.people[peopleID].url} />}
 					</div>
 				)}

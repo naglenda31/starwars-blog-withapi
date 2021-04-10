@@ -1,41 +1,45 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-export const PersonStats = props => {
-	const [person, setPerson] = useState(null);
+export const VehicleStats = props => {
+	const [vehicle, setVehicle] = useState(null);
 	useEffect(() => {
 		fetch(props.url)
 			.then(res => res.json())
-			.then(data => setPerson(data.result.properties));
+			.then(data => setVehicle(data.result.properties));
 	}, []);
 	return (
 		<div className="container">
 			<div className="row details-table text-center">
-				{person !== null && (
+				{vehicle !== null && (
 					<>
-						<div className="col">
-							<h5 className="details-table-header">Birth Year</h5>
-							<p>{person.birth_year}</p>
+						<div className="column col-12 col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Model</h5>
+							<p>{vehicle.model}</p>
 						</div>
-						<div className="col">
-							<h5 className="details-table-header">Height</h5>
-							<p>{person.height}</p>
+						<div className="column col-12 col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Vehicle class</h5>
+							<p>{vehicle.vehicle_class}</p>
 						</div>
-						<div className="col">
-							<h5 className="details-table-header">Mass</h5>
-							<p>{person.mass}</p>
+						<div className="column col-12 col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Manufacturer</h5>
+							<p>{vehicle.manufacturer}</p>
 						</div>
-						<div className="col">
-							<h5 className="details-table-header">Gender</h5>
-							<p>{person.gender}</p>
+						<div className="column col-12 col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Length</h5>
+							<p>{vehicle.length}</p>
 						</div>
-						<div className="col">
-							<h5 className="details-table-header">Hair color</h5>
-							<p>{person.hair_color}</p>
+						<div className="column col-12 col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Crew</h5>
+							<p>{vehicle.crew}</p>
 						</div>
-						<div className="col">
-							<h5 className="details-table-header">Eye color</h5>
-							<p>{person.eye_color}</p>
+						<div className="column col-12 col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Passengers</h5>
+							<p>{vehicle.passengers}</p>
+						</div>
+						<div className="column col-12 col-md-4 col-xl p-2">
+							<h5 className="details-table-header">Cargo capacity</h5>
+							<p>{vehicle.cargo_capacity}</p>
 						</div>
 					</>
 				)}
@@ -44,6 +48,6 @@ export const PersonStats = props => {
 	);
 };
 
-PersonStats.propTypes = {
+VehicleStats.propTypes = {
 	url: PropTypes.string.isRequired
 };

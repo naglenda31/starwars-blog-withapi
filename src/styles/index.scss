@@ -1,3 +1,10 @@
+html {
+    --top-spacing: 100px;
+    scroll-padding-top: var(--top-spacing);
+    margin-top: var(--top-spacing);
+}
+
+
 body, html, #app{
     height: 100vh;
 }
@@ -31,6 +38,11 @@ body{
     border-radius: 1rem;
 }
 
+.details-table .column{
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+}
+
 .name, .details-table-header{
     text-transform: uppercase;
     color: #dc3545;
@@ -39,17 +51,20 @@ body{
 .dropdown-menu{
       right: 0;
       left: auto;
+      padding: 0.4rem;
+      .dropdown-item:hover{
+        background: #f8f9fa;  
+        color: #dc3545;
+      }
 }
 
-.delete-favorite-icon{
+.dropdown-item, .delete-favorite-icon{
     cursor: pointer;
 }
 
-.footer{
+
+.page-footer{
     padding: 1rem;
-    .footer-message{
-        transform: perspective(200px) rotateX(25deg);
-    }
         .message-emphasis{
             color: #dc3545; 
             font-weight: 700;
@@ -57,14 +72,14 @@ body{
 }
 
 @media screen and (min-width: 361px){
-    .footer-message{
+    .page-footer-message{
       font-size: 2rem;
     }
 }
   
 /* If the screen size is 360px wide or less*/
 @media screen and (max-width: 360px) {
-    .footer-message{
+    .page-footer-message{
       font-size: 1.25rem;
     }
 }
@@ -75,8 +90,8 @@ body{
 }
 
   /* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+::-webkit-scrollbar-track, ::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-corner{
+    background: #f8f9fa;
     border-radius: 1rem;
 }
 

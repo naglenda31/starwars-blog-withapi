@@ -31,7 +31,7 @@ export const Navbar = () => {
 							{store.favorites.length === 0 ? "" : store.favorites.length}
 						</span>
 					</button>
-					<div className="dropdown-menu p-1" aria-labelledby="dropdownMenuButton">
+					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						{store.favorites.length > 0
 							? store.favorites.map((item, index) => {
 									return (

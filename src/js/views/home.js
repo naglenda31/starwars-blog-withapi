@@ -9,8 +9,8 @@ export const Home = () => {
 	const params = useParams();
 	return (
 		<div className="content-wrapper">
-			<div className="container section-container p-2 pt-4 mt-5 mb-3">
-				<h2 className="section-title">Characters</h2>
+			<div className="container section-container p-2 my-2">
+				<h2 className="section-title mt-1">Characters</h2>
 				<div className="row cardrow">
 					{store.people.map((character, index) => {
 						return (
@@ -42,7 +42,7 @@ export const Home = () => {
 				</div>
 			</div>
 			<div className="container section-container p-2 my-2">
-				<h2 className="section-title mt-2">Planets</h2>
+				<h2 className="section-title">Planets</h2>
 				<div className="row cardrow">
 					{store.planets.map((planet, index) => {
 						return (
@@ -73,8 +73,8 @@ export const Home = () => {
 					})}
 				</div>
 			</div>
-			<div className="container section-container px-2 pt-2 pb-5 mt-2 mb-5">
-				<h2 className="section-title mt-2">Vehicles</h2>
+			<div className="container section-container p-2 my-2">
+				<h2 className="section-title">Vehicles</h2>
 				<div className="row cardrow">
 					{store.vehicles.map((vehicle, index) => {
 						return (
