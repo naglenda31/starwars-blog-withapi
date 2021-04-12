@@ -8,7 +8,7 @@ import { faAcquisitionsIncorporated } from "@fortawesome/free-brands-svg-icons";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<nav className="navbar fixed-top navbar-light bg-light mb-3">
+		<nav className="navbar sticky-top navbar-light bg-light mb-3">
 			<div className="container-fluid">
 				<Link to="/">
 					<span className="navbar-brand mb-0 h1">
