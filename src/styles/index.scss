@@ -3,24 +3,25 @@ html{
     scrollbar-width: auto;
 }
 
-@media screen and (max-width: 768px){
-    body{
-        background-size: cover;
-    }
-}
-
 body{
     background: url("https://infinitediaries.net/wp-content/uploads/2016/01/Star-Wars-Death-Star.jpg") no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
     font-family: 'Sawarabi Gothic', sans-serif;
     color: #f8f9fa;
 }
 
-.card-title, .page-footer-message{
+.navbar, .page-footer{
+    background: #000000;
+}
+
+.card-title{
     color: #343a40;
 }
 
 .logo{
-    width: 100px;
+    width: 150px;
     transform: perspective(100px) rotateX(20deg);
 }
 
@@ -47,9 +48,10 @@ body{
     border-radius: 0.25rem;
 }
 
-.name, .details-table-header{
+.section-title, .name, .details-table-header{
     text-transform: uppercase;
     color: #dc3545;
+    font-weight: 600;
 }
 
 .dropdown-menu{
@@ -68,6 +70,9 @@ body{
 
 .page-footer{
     padding: 1rem;
+    .page-footer-message{
+        color: #f8f9fa;
+    }
         .message-emphasis{
             color: #dc3545; 
             font-weight: 700;   

@@ -8,13 +8,13 @@ import { faAcquisitionsIncorporated } from "@fortawesome/free-brands-svg-icons";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<nav className="navbar sticky-top navbar-light bg-light mb-3">
+		<nav className="navbar sticky-top navbar-light mb-3">
 			<div className="container-fluid">
 				<Link to="/">
 					<span className="navbar-brand mb-0 h1">
 						<img
 							className="rounded logo"
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoB6ccXyKyRRlSs7mHo4a5ANaTgt6zefQs4Q&usqp=CAU"
+							src="https://emptylighthouse-production.s3-us-west-2.amazonaws.com/s3fs-public/field/image/red-starwars-logo.jpg"
 						/>
 					</span>
 				</Link>

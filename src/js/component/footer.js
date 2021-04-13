@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faJedi } from "@fortawesome/free-solid-svg-icons";
 
 export const Footer = () => (
-	<footer className="page-footer bg-light mt-2 text-center">
+	<footer className="page-footer mt-2 text-center">
 		<div>
 			<h3 className="page-footer-message">
 				<span className="message-emphasis">
