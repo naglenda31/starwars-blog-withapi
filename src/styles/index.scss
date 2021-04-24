@@ -13,7 +13,7 @@ body{
 }
 
 .navbar, .page-footer{
-    background: #000000;
+    background: rgb(0, 0, 0);
 }
 
 .card-title{
@@ -41,6 +41,7 @@ body{
 .topandtable-container{
     border: 2px solid #dc3545;
     border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .details-table .column{

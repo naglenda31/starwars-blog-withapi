@@ -3,10 +3,12 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as farFaHeart } from "@fortawesome/free-regular-svg-icons";
+import { PersonStats } from "../component/personStats";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const peopleID = params.peopleID;
 	return (
 		<div className="content-wrapper">
 			<div className="container section-container p-2 my-2">
@@ -17,7 +19,16 @@ export const Home = () => {
 							<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
 								<div className="container card-container p-0">
 									<div className="card m-auto" style={{ width: "18rem" }}>
-										<img src="http://placehold.jp/400x200.png" className="card-img-top" alt="character image" />
+										<img
+											// src={
+											// 	store.people.length > 0 &&
+											// 	typeof peopleID !== "undefined" && (
+											// 		<PersonStats data={store.people[peopleID].photo_url} />
+											// 	)
+											// }
+											className="card-img-top"
+											alt="character image"
+										/>
 										<div className="card-body">
 											<h5 className="card-title">{character.name}</h5>
 											<div className="footer d-flex">
@@ -49,7 +60,11 @@ export const Home = () => {
 							<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
 								<div className="container card-container p-0">
 									<div className="card m-auto" style={{ width: "18rem" }}>
-										<img src="http://placehold.jp/400x200.png" className="card-img-top" alt="planet image" />
+										<img
+											src="http://placehold.jp/400x200.png"
+											className="card-img-top"
+											alt="planet image"
+										/>
 										<div className="card-body">
 											<h5 className="card-title">{planet.name}</h5>
 											<div className="footer d-flex">
@@ -81,7 +96,11 @@ export const Home = () => {
 							<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
 								<div className="container card-container p-0">
 									<div className="card m-auto" style={{ width: "18rem" }}>
-										<img src="http://placehold.jp/400x200.png" className="card-img-top" alt="vehicle image" />
+										<img
+											src="http://placehold.jp/400x200.png"
+											className="card-img-top"
+											alt="vehicle image"
+										/>
 										<div className="card-body">
 											<h5 className="card-title">{vehicle.name}</h5>
 											<div className="footer d-flex">

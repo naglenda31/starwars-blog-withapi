@@ -2,12 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 export const PlanetStats = props => {
-	const [planet, setPlanet] = useState(null);
-	useEffect(() => {
-		fetch(props.url)
-			.then(res => res.json())
-			.then(data => setPlanet(data.result.properties));
-	}, []);
+	const [planet, setPlanet] = useState(props.data);
 	return (
 		<div className="container">
 			<div className="row details-table text-center">
@@ -53,5 +48,5 @@ export const PlanetStats = props => {
 };
 
 PlanetStats.propTypes = {
-	url: PropTypes.string.isRequired
+	data: PropTypes.object.isRequired
 };

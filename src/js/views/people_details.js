@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faJediOrder } from "@fortawesome/free-brands-svg-icons";
 import { PersonStats } from "../component/personStats";
 
 export const PeopleDetails = props => {
@@ -18,7 +15,7 @@ export const PeopleDetails = props => {
 						<div className="row details-top-section">
 							<div className="col-12 col-lg-7 align-self-center">
 								<img
-									src="https://i.imgur.com/mm0QJgY.jpg"
+									src={store.people[peopleID].photo_url}
 									className="w-100 rounded"
 									alt="character image"
 								/>
@@ -40,7 +37,7 @@ export const PeopleDetails = props => {
 							</div>
 						</div>
 						<br />
-						{store.people.length > 0 && <PersonStats url={store.people[peopleID].url} />}
+						{store.people.length > 0 && <PersonStats data={store.people[peopleID]} />}
 					</div>
 				)}
 			</div>
