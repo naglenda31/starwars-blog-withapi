@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as farFaHeart } from "@fortawesome/free-regular-svg-icons";
-import { PersonStats } from "../component/personStats";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -20,13 +19,8 @@ export const Home = () => {
 								<div className="container card-container p-0">
 									<div className="card m-auto" style={{ width: "18rem" }}>
 										<img
-											// src={
-											// 	store.people.length > 0 &&
-											// 	typeof peopleID !== "undefined" && (
-											// 		<PersonStats data={store.people[peopleID].photo_url} />
-											// 	)
-											// }
-											className="card-img-top"
+											src={character.photo_url}
+											className="card-img-top rounded"
 											alt="character image"
 										/>
 										<div className="card-body">
@@ -62,7 +56,7 @@ export const Home = () => {
 									<div className="card m-auto" style={{ width: "18rem" }}>
 										<img
 											src="http://placehold.jp/400x200.png"
-											className="card-img-top"
+											className="card-img-top rounded"
 											alt="planet image"
 										/>
 										<div className="card-body">
@@ -98,7 +92,7 @@ export const Home = () => {
 									<div className="card m-auto" style={{ width: "18rem" }}>
 										<img
 											src="http://placehold.jp/400x200.png"
-											className="card-img-top"
+											className="card-img-top rounded"
 											alt="vehicle image"
 										/>
 										<div className="card-body">

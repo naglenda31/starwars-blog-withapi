@@ -40,7 +40,7 @@ export const VehicleDetails = props => {
 							</div>
 						</div>
 						<br />
-						{store.vehicles.length > 0 && <VehicleStats url={store.vehicles[vehicleID].url} />}
+						{store.vehicles.length > 0 && <VehicleStats data={store.vehicles[vehicleID]} />}
 					</div>
 				)}
 			</div>

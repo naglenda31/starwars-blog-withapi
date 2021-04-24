@@ -16,9 +16,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			initialize: () => {
 				fetch(`${base_url}/people`).then(res => res.json().then(data => setStore({ people: data.people })));
 				fetch(`${base_url}/planets`).then(res => res.json().then(data => setStore({ planets: data.planets })));
-				// fetch(`${base_url}/vehicles`).then(res =>
-				// 	res.json().then(data => setStore({ vehicles: data.results }))
-				// );
+				fetch(`${base_url}/vehicles`).then(res =>
+					res.json().then(data => setStore({ vehicles: data.vehicles }))
+				);
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
