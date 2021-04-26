@@ -1,5 +1,5 @@
 const getState = ({ getStore, getActions, setStore }) => {
-	const base_url = process.env.BASE_URL;
+	const base_url = "https://3000-indigo-wren-4llumlfh.ws-us03.gitpod.io";
 	return {
 		store: {
 			favorites: [],

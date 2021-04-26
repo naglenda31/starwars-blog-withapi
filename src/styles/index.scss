@@ -11,8 +11,11 @@ body{
     font-family: 'Sawarabi Gothic', sans-serif;
     color: #f8f9fa;
 }
+.navbar{
+    background: #000000;
+}
 
-.navbar, .topandtable-container, .page-footer{
+.topandtable-container, .page-footer{
        background-color: rgba(0, 0, 0, 0.7);
 }
 
