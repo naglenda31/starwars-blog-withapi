@@ -23,17 +23,7 @@ export const PeopleDetails = props => {
 
 							<div className="col-12 col-lg-5 p-3 p-xl-4">
 								<h3 className="name m-2">{store.people[peopleID].name}</h3>
-								<p className="description m-2">
-									Luke Skywalker was a Tatooine farmboy who rose from humble beginnings to become one
-									of the greatest Jedi the galaxy has ever known. Along with his friends Princess Leia
-									and Han Solo, Luke battled the evil Empire, discovered the truth of his parentage,
-									and ended the tyranny of the Sith. A generation later, the location of the famed
-									Jedi master was one of the galaxy&apos;s greatest mysteries. Haunted by Ben
-									Solo&apos;s fall to evil and convinced the Jedi had to end, Luke sought exile on a
-									distant world, ignoring the galaxy&apos;s pleas for help. But his solitude would be
-									interrupted – and Luke Skywalker had one final, momentous role to play in the
-									struggle between good and evil.
-								</p>
+								<p className="description m-2">{store.people[peopleID].description}</p>
 							</div>
 						</div>
 						<br />
