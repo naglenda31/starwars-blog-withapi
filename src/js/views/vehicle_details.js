@@ -18,7 +18,7 @@ export const VehicleDetails = props => {
 						<div className="row details-top-section">
 							<div className="col-12 col-lg-7 align-self-center">
 								<img
-									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgZ2Fz5sbJd1qDHJa1Efa2nW5MaliXlHb-gA&usqp=CAU"
+									src={store.vehicles[vehicleID].photo_url}
 									className="w-100 rounded"
 									alt="vehicle image"
 								/>

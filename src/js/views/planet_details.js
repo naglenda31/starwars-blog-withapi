@@ -18,7 +18,7 @@ export const PlanetDetails = props => {
 						<div className="row details-top-section">
 							<div className="col-12 col-md-7 align-self-center">
 								<img
-									src="https://static.wikia.nocookie.net/starwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131019121937"
+									src={store.planets[planetID].photo_url}
 									className="w-100 rounded"
 									alt="planet image"
 								/>
@@ -39,7 +39,7 @@ export const PlanetDetails = props => {
 							</div>
 						</div>
 						<br />
-						{store.planets.length > 0 && <PlanetStats url={store.planets[planetID].url} />}
+						{store.planets.length > 0 && <PlanetStats data={store.planets[planetID]} />}
 					</div>
 				)}
 			</div>

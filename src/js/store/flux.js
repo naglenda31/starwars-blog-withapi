@@ -1,5 +1,5 @@
 const getState = ({ getStore, getActions, setStore }) => {
-	const base_url = "https://3000-indigo-wren-4llumlfh.ws-us03.gitpod.io";
+	const base_url = "https://starwars-api-4geeks.herokuapp.com";
 	return {
 		store: {
 			favorites: [],
