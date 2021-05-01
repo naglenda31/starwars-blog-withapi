@@ -16,27 +16,26 @@ export const Home = () => {
 					{store.people.map((character, index) => {
 						return (
 							<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
-								<div className="container card-container p-0">
-									<div className="card m-auto" style={{ maxWidth: "18rem" }}>
-										<img
-											src={character.photo_url}
-											className="card-img-top rounded"
-											alt="character image"
-										/>
-										<div className="card-body">
-											<h5 className="card-title">{character.name}</h5>
-											<div className="footer d-flex">
-												<Link to={`/people_details/${index}`}>
-													<a href="#" className="btn btn-outline-danger">
-														Learn more!
-													</a>
-												</Link>
-												<div className="favorite-button btn btn-outline-danger ml-auto">
-													<FontAwesomeIcon
-														icon={farFaHeart}
-														onClick={() => actions.addFavorite(character)}
-													/>
-												</div>
+								<div className="card bg-transparent h-100 m-auto" style={{ maxWidth: "18rem" }}>
+									<img
+										src={character.photo_url}
+										className="card-img-top"
+										style={{ maxHeight: "160px" }}
+										alt="character image"
+									/>
+									<div className="card-body d-flex flex-column justify-content-center">
+										<h5 className="card-title">{character.name}</h5>
+										<div className="footer d-flex">
+											<Link to={`/people_details/${index}`}>
+												<a href="#" className="btn btn-outline-danger">
+													Learn more!
+												</a>
+											</Link>
+											<div className="favorite-button btn btn-outline-danger ml-auto">
+												<FontAwesomeIcon
+													icon={farFaHeart}
+													onClick={() => actions.addFavorite(character)}
+												/>
 											</div>
 										</div>
 									</div>
@@ -52,27 +51,26 @@ export const Home = () => {
 					{store.planets.map((planet, index) => {
 						return (
 							<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
-								<div className="container card-container p-0">
-									<div className="card m-auto" style={{ width: "18rem" }}>
-										<img
-											src={planet.photo_url}
-											className="card-img-top rounded"
-											alt="planet image"
-										/>
-										<div className="card-body">
-											<h5 className="card-title">{planet.name}</h5>
-											<div className="footer d-flex">
-												<Link to={`/planet_details/${index}`}>
-													<a href="#" className="btn btn-outline-danger">
-														Learn more!
-													</a>
-												</Link>
-												<div className="favorite-button btn btn-outline-danger ml-auto">
-													<FontAwesomeIcon
-														icon={farFaHeart}
-														onClick={() => actions.addFavorite(planet)}
-													/>
-												</div>
+								<div className="card bg-transparent h-100 m-auto" style={{ width: "18rem" }}>
+									<img
+										src={planet.photo_url}
+										className="card-img-top"
+										style={{ maxHeight: "160px" }}
+										alt="planet image"
+									/>
+									<div className="card-body d-flex flex-column justify-content-center">
+										<h5 className="card-title">{planet.name}</h5>
+										<div className="footer d-flex">
+											<Link to={`/planet_details/${index}`}>
+												<a href="#" className="btn btn-outline-danger">
+													Learn more!
+												</a>
+											</Link>
+											<div className="favorite-button btn btn-outline-danger ml-auto">
+												<FontAwesomeIcon
+													icon={farFaHeart}
+													onClick={() => actions.addFavorite(planet)}
+												/>
 											</div>
 										</div>
 									</div>
@@ -88,27 +86,26 @@ export const Home = () => {
 					{store.vehicles.map((vehicle, index) => {
 						return (
 							<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
-								<div className="container card-container p-0">
-									<div className="card m-auto" style={{ width: "18rem" }}>
-										<img
-											src={vehicle.photo_url}
-											className="card-img-top rounded"
-											alt="vehicle image"
-										/>
-										<div className="card-body">
-											<h5 className="card-title">{vehicle.name}</h5>
-											<div className="footer d-flex">
-												<Link to={`/vehicle_details/${index}`}>
-													<a href="#" className="btn btn-outline-danger">
-														Learn more!
-													</a>
-												</Link>
-												<div className="favorite-button btn btn-outline-danger ml-auto">
-													<FontAwesomeIcon
-														icon={farFaHeart}
-														onClick={() => actions.addFavorite(vehicle)}
-													/>
-												</div>
+								<div className="card bg-transparent h-100 m-auto" style={{ width: "18rem" }}>
+									<img
+										src={vehicle.photo_url}
+										className="card-img-top"
+										style={{ maxHeight: "160px" }}
+										alt="vehicle image"
+									/>
+									<div className="card-body d-flex flex-column justify-content-center">
+										<h5 className="card-title">{vehicle.name}</h5>
+										<div className="footer d-flex">
+											<Link to={`/vehicle_details/${index}`}>
+												<a href="#" className="btn btn-outline-danger">
+													Learn more!
+												</a>
+											</Link>
+											<div className="favorite-button btn btn-outline-danger ml-auto">
+												<FontAwesomeIcon
+													icon={farFaHeart}
+													onClick={() => actions.addFavorite(vehicle)}
+												/>
 											</div>
 										</div>
 									</div>

@@ -12,12 +12,24 @@ body{
     color: #f8f9fa;
 }
 
+.card-img-top{
+    object-fit: cover;
+    object-position: 100% 10%;
+}
+
 .navbar{
     background: #000000;
 }
 
+.card-body{
+    background: rgba(248, 249, 250, 0.8);
+    border-bottom-left-radius: 0.25rem; 
+    border-bottom-right-radius: 0.25rem; 
+}
+   
+
 .topandtable-container, .page-footer{
-       background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .card-title{
@@ -27,6 +39,10 @@ body{
 .logo{
     width: 150px;
     transform: perspective(100px) rotateX(20deg);
+}
+
+.card-title{
+    font-size: 1.5rem;
 }
 
 .section-title{
@@ -103,7 +119,7 @@ body{
 
   /* Track */
 ::-webkit-scrollbar-track, ::-webkit-scrollbar-track-piece{
-    background: #f8f9fa;
+    background: rgb(248, 249, 250);
     border-radius: 1rem;
 }
 
