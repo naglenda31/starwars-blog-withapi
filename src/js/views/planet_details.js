@@ -26,30 +26,20 @@ export const PlanetDetails = props => {
 
 							<div className="col-12 col-md-5 p-3 p-xl-4">
 								<h3 className="name m-2">{store.planets[planetID].name}</h3>
-								<p className="description m-2">
-									Located in the galaxy&apos;s desolate Outer Rim, Tatooine orbits a pair of binary
-									G-type stars, Tatoo I and Tatoo II. The planet&apos;s indigenous lifeforms such as
-									the womp rat, bantha, Sarlacc, and Krayt dragon are well-adapted to its arid
-									climate. Though its proximity to the suns makes life difficult, it is located near
-									key hyperspace routes, making it a smuggler and gangster haven; debris from
-									shipwrecks also provides resources for scavengers. Annual sandstorms wipe out
-									landmarks and make nomadic life dangerous, with the planet&apos;s populations
-									clustered into distinct settlements.
-								</p>
+								<p className="description m-2">{store.planets[planetID].description}</p>
 							</div>
 						</div>
 						<br />
 						{store.planets.length > 0 && <PlanetStats data={store.planets[planetID]} />}
 					</div>
 				)}
-			</div>
-
-			<div className="d-flex justify-content-end mr-4 my-3">
-				<Link to="/">
-					<span className="btn btn-danger ml-auto" href="#" role="button">
-						Back home
-					</span>
-				</Link>
+				<div className="d-flex justify-content-end mr-4 my-3">
+					<Link to="/">
+						<span className="btn btn-danger" href="#" role="button">
+							Back home
+						</span>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

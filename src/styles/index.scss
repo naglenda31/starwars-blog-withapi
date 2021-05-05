@@ -14,7 +14,11 @@ body{
 
 .card-img-top{
     object-fit: cover;
-    object-position: 100% 10%;
+    object-position: center;
+}
+
+.card-img-top.character{
+    object-position: 100% 0%;
 }
 
 .navbar{

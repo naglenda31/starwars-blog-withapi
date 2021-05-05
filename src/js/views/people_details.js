@@ -30,14 +30,13 @@ export const PeopleDetails = props => {
 						{store.people.length > 0 && <PersonStats data={store.people[peopleID]} />}
 					</div>
 				)}
-			</div>
-
-			<div className="d-flex justify-content-end mr-4 my-3">
-				<Link to="/">
-					<span className="btn btn-danger ml-auto" href="#" role="button">
-						Back home
-					</span>
-				</Link>
+				<div className="d-flex justify-content-end mr-4 my-3">
+					<Link to="/">
+						<span className="btn btn-danger" href="#" role="button">
+							Back home
+						</span>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

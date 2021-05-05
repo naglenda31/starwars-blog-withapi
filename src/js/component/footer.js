@@ -14,6 +14,9 @@ export const Footer = () => (
 					<FontAwesomeIcon icon={faJedi} />
 				</span>
 			</h3>
+			<div>
+				<p>©Lucasfilm Ltd. All Rights Reserved</p>
+			</div>
 		</div>
 	</footer>
 );

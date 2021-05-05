@@ -16,14 +16,14 @@ export const Home = () => {
 					{store.people.map((character, index) => {
 						return (
 							<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
-								<div className="card bg-transparent h-100 m-auto" style={{ maxWidth: "18rem" }}>
+								<div className="card bg-transparent h-100 m-auto" style={{ width: "18rem" }}>
 									<img
 										src={character.photo_url}
-										className="card-img-top"
+										className="card-img-top character"
 										style={{ maxHeight: "160px" }}
 										alt="character image"
 									/>
-									<div className="card-body d-flex flex-column justify-content-center">
+									<div className="card-body d-flex flex-column justify-content-center pb-3">
 										<h5 className="card-title">{character.name}</h5>
 										<div className="footer d-flex">
 											<Link to={`/people_details/${index}`}>
@@ -58,7 +58,7 @@ export const Home = () => {
 										style={{ maxHeight: "160px" }}
 										alt="planet image"
 									/>
-									<div className="card-body d-flex flex-column justify-content-center">
+									<div className="card-body d-flex flex-column justify-content-center pb-3">
 										<h5 className="card-title">{planet.name}</h5>
 										<div className="footer d-flex">
 											<Link to={`/planet_details/${index}`}>
@@ -93,7 +93,7 @@ export const Home = () => {
 										style={{ maxHeight: "160px" }}
 										alt="vehicle image"
 									/>
-									<div className="card-body d-flex flex-column justify-content-center">
+									<div className="card-body d-flex flex-column justify-content-center pb-3">
 										<h5 className="card-title">{vehicle.name}</h5>
 										<div className="footer d-flex">
 											<Link to={`/vehicle_details/${index}`}>
