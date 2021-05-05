@@ -38,7 +38,7 @@ export const Navbar = () => {
 										<div className="dropdown-item p-1" href="#" key={index}>
 											{item.name}
 
-											<span className="float-right delete-favorite-icon">
+											<span className="ml-2 delete-favorite-icon">
 												<FontAwesomeIcon
 													icon={faTrash}
 													onClick={() => actions.removeFavorite(index)}
