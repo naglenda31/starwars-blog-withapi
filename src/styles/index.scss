@@ -13,6 +13,7 @@ body{
 }
 
 .card-img-top{
+    width: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -54,6 +55,7 @@ body{
     text-align: center;
     font-size: 2.5rem;
     margin: 1.5rem auto;
+    letter-spacing: 2px;
 }
 
 .row.cardrow{

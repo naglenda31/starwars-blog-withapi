@@ -24,7 +24,7 @@ export const Home = () => {
 										alt="character image"
 									/>
 									<div className="card-body d-flex flex-column justify-content-center pb-3">
-										<h5 className="card-title">{character.name}</h5>
+										<h3 className="card-title">{character.name}</h3>
 										<div className="footer d-flex">
 											<Link to={`/people_details/${index}`}>
 												<a href="#" className="btn btn-outline-danger">
@@ -59,7 +59,7 @@ export const Home = () => {
 										alt="planet image"
 									/>
 									<div className="card-body d-flex flex-column justify-content-center pb-3">
-										<h5 className="card-title">{planet.name}</h5>
+										<h3 className="card-title">{planet.name}</h3>
 										<div className="footer d-flex">
 											<Link to={`/planet_details/${index}`}>
 												<a href="#" className="btn btn-outline-danger">
@@ -94,7 +94,7 @@ export const Home = () => {
 										alt="vehicle image"
 									/>
 									<div className="card-body d-flex flex-column justify-content-center pb-3">
-										<h5 className="card-title">{vehicle.name}</h5>
+										<h3 className="card-title">{vehicle.name}</h3>
 										<div className="footer d-flex">
 											<Link to={`/vehicle_details/${index}`}>
 												<a href="#" className="btn btn-outline-danger">

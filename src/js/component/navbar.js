@@ -15,6 +15,7 @@ export const Navbar = () => {
 						<img
 							className="rounded logo"
 							src="https://emptylighthouse-production.s3-us-west-2.amazonaws.com/s3fs-public/field/image/red-starwars-logo.jpg"
+							alt="logo"
 						/>
 					</span>
 				</Link>
